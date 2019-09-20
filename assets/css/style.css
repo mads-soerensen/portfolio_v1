@@ -1,0 +1,610 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: "Dosis", sans-serif;
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+}
+
+.name-header {
+  grid-area: header;
+  background-color: #003649;
+  height: 5vw;
+  color: white;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+
+}
+
+.name-header img {
+  width: 2.5vw;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10vw;
+  margin-right: 2vw;
+}
+/* -------------- BUTTONS IN NAVIGATION ---------------- */
+button {
+  height: 2.5vw;
+  background: transparent;
+  font-weight: 100;
+  border: none;
+  font-size: 1.2vw;
+  position: relative;
+  transition: 0.3s;
+  margin: 1vw;
+  color: white;
+  line-height: 3vw;
+  font-family: "Dosis", sans-serif;
+}
+button:before {
+  content: "";
+  border-bottom: 1px solid white;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  transition: 0.3s;
+}
+
+button:hover:before {
+  width: 100%;
+  padding: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button.active:before {
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+/*--------------------OM MIG SIDE----------------------------*/
+
+.name-text {
+  grid-area: text;
+  margin-top: 5vw;
+}
+
+.name-text h1 {
+  margin-top: 2vw;
+  margin-left: 10vw;
+  margin-bottom: 1.5vw;
+  font-size: 2.2vw;
+}
+.name-text h1:after,
+.name-timeline h1:after {
+  content: " ";
+  display: block;
+  border: 0.05vw solid #003649;
+  margin: 1.5vw 0 0.5vw 0vw;
+  width: 40vw;
+}
+
+.aboutme {
+  line-height: 2vw;
+  margin-left: 10vw;
+  font-size: 1.2vw;
+}
+
+.name-image {
+  grid-area: image;
+  width: 40vw;
+  margin-top: 6vw;
+}
+
+.headshot {
+  width: 20vw;
+  
+  margin-left: 10vw;
+}
+
+.name-exp {
+  grid-area: exp;
+  height: 50vw;
+}
+.name-qual {
+  grid-area: qual;
+}
+
+.name-exp h2 {
+  margin-left: 10vw;
+  margin-top: 2vw;
+  font-size: 1.8vw;
+}
+
+.name-exp h3 {
+  margin-left: 10vw;
+  margin-top: 1vw;
+  color: #003649;
+  font-size: 1.3vw;
+}
+
+.name-exp h4 {
+  margin-left: 10vw;
+  color: orange;
+  font-size: 1.1vw;
+}
+
+.name-exp p {
+  margin: 0.2vw 0 2vw 10vw;
+  width: 70%;
+  font-size: 1vw;
+}
+
+.name-qual h2 {
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+  font-size: 1.8vw;
+}
+
+.name-qual p {
+  margin-top: 0.5vw;
+  font-size: 1vw;
+}
+
+.name-qual ul {
+  margin-left: 1.5vw;
+  margin-top: 0.5vw;
+  font-size: 1vw;
+}
+
+.name-qual h3 {
+  color: #003649;
+  font-size: 1.3vw;
+}
+
+.name-qual h4 {
+  color: orange;
+  margin-bottom: 1vw;
+  font-size: 1.1vw;
+}
+
+.innerline {
+  border-bottom: 0.15vw solid #003649;
+  margin-left: 10vw;
+  margin-top: 2vw;
+}
+
+.innerline-right {
+  border-bottom: 0.15vw solid #003649;
+  margin-right: 10vw;
+  margin-top: 2vw;
+}
+
+/*----------------------PROJEKT SIDE------------------------------*/
+
+.name-mainright:hover .overlayinfo {
+  opacity: 0.9;
+}
+
+.overlayinfo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.8s ease-in-out;
+  background-color: #003649;
+  color: white;
+  cursor: pointer;
+}
+
+.textoverlay {
+  text-align: center;
+  margin-top: 2vw;
+}
+
+.name-mainright {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: relative;
+  margin-top: 2vw;
+  padding: 1vw 2vw 1vw 2vw;
+}
+
+.name-mainright h2 {
+  font-size: 1.5vw;
+}
+
+.name-mainright p {
+  font-size: 1.2vw;
+}
+
+.name-timeline {
+  grid-area: tline;
+  background-color: white;
+  height: 100vw;
+  color: black;
+  margin-top: 7vw;
+}
+
+.option-items,
+.name-timeline h1,
+.projecttxt {
+  margin-left: 10vw;
+}
+
+.name-timeline h1 {
+  font-size: 2vw;
+}
+
+.projecttxt {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  font-size: 1.2vw;
+  line-height: 2vw;
+}
+
+/*-------------------FORSIDE--------------------*/
+
+.name-frontl {
+  grid-area: frontl;
+  height: 58vw;
+  background-color: white;
+  margin-top: 5vw;
+}
+
+.profilimg {
+  margin-bottom: 0.5vw;
+  margin-top: 2vw;
+  width: 20vw;
+}
+
+.name-frontm {
+  grid-area: frontm;
+  text-align: center;
+  background-color: white;
+  background-image: url("../images/personbg.jpg");
+  background-repeat: no-repeat;
+  background-size: 52vw 48vw;
+  margin-top: 5vw;
+}
+
+
+.name-frontm h1 {
+  font-size: 2vw;
+  color: white;
+  margin-top: 20vw;
+}
+
+.name-frontm p {
+  width: 90%;
+  line-height: 3vw;
+  font-size: 1.4vw;
+}
+
+.name-frontm h1:after {
+  content: " ";
+  display: block;
+  border: 1px solid white;
+  margin: 1.5vw 0 0.5vw 10vw;
+  width: 60%;
+}
+
+.frontbtn {
+  background-color: #003649;
+  height: 4vw;
+  width: 10vw;
+  margin-top: 2vw;
+}
+
+.frontbtn:hover {
+  border: 2px solid #003649;
+  background-color: white;
+  color: #003649;
+}
+
+.frontbtn:before {
+  display: none;
+}
+
+/*-----------------GRID SYSTEM---------------------*/
+.container-about {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "text text image"
+    "exp exp qual"
+    "footer footer footer";
+  background-color: white;
+}
+
+.container-personal {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "tline tline tline"
+    "footer footer footer";
+  background-color: white;
+  grid-gap: 0.5vw;
+}
+
+.container-index {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "frontl frontm frontm"
+    "footer footer footer";
+}
+
+/*-------------------- KATEGORI UNDER PROJEKTER-----------------*/
+.option-items {
+  margin-left: 10vw;
+}
+
+.option-items > div {
+  float: left;
+  width: 15.5%;
+  margin: 0.25% 2vw 0.25% 0.25%;
+  height: 6vw;
+  padding-bottom: 12%;
+  transition: all 0.3s ease-in-out;
+}
+
+#options {
+  margin: 2vw 1.5% 2vw 10vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+#options a:hover {
+  box-shadow: inset 0px 0px 0px 2px #003649;
+  background-color: white;
+  color: #003649;
+}
+
+#options li {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+}
+
+#options a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 1.5vw 2.6vw;
+  background-color: #003649;
+  font-size: 1vw;
+}
+
+.option-items > div.hide {
+  display: none;
+}
+
+/*----------------ANIMATION FORSIDE-------------*/
+.poster {
+  background-color: white;
+  box-sizing: border-box;
+  display: grid;
+  font-family: "Dosis", sans-serif;
+  font-weight: 800;
+  font-size: 6.8vw;
+  grid-template-columns: 7.9vw 23vw;
+  height: 44vw;
+  padding: 6vw 10vw 18vw;
+  text-transform: uppercase;
+  width: 38vw;
+  margin-top: 5vw;
+}
+
+.left {
+  animation: slideleft 1s linear;
+  color: #003649;
+  overflow: hidden;
+  transform: skewY(-20deg);
+  transform-origin: top right;
+  text-indent: 1vw;
+}
+.right {
+  animation: slideright 1s linear;
+  color: #001922;
+  overflow: hidden;
+  text-indent: -6.9vw;
+  transform: skewY(30deg);
+  transform-origin: top left;
+}
+
+.last {
+  color: #004058;
+  font-size: 1.9vw;
+  line-height: 1;
+  overflow: hidden;
+  transform: skewY(30deg) skewX(-45deg);
+  transform-origin: top left;
+}
+.last > div {
+  animation: slidebottom 1s linear;
+}
+
+@keyframes slideleft {
+  0% {
+    text-indent: -23.25rem;
+  }
+  100% {
+    text-indent: 0;
+  }
+}
+
+@keyframes slidebottom {
+  0% {
+    text-indent: -18rem;
+  }
+  25% {
+    text-indent: -18rem;
+  }
+  100% {
+    text-indent: 0;
+  }
+}
+
+@keyframes slideright {
+  0% {
+    text-indent: -28.5rem;
+  }
+  100% {
+    text-indent: -5.25;
+  }
+}
+/*------------------OVERLAYS---------------------------*/
+.overlay {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+.overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay img {
+  max-width: 40vw;
+  display: inline-block;
+  margin-top: 10vw;
+}
+
+.overlay h1 {
+  display: inline-block;
+  width: 50%;
+  margin-top: 10vw;
+  margin-left: 10vw;
+  font-size: 2.5vw;
+}
+
+.overlay h1:after {
+  width: 90%;
+}
+
+.overlay p {
+    margin-left: 10vw;
+    margin-top: 2vw;
+    line-height: 2vw;
+    width: 30vw;
+    font-size: 1.2vw;
+}
+
+.overlay a {
+  color: #003649;
+}
+
+iframe {
+    width: 35vw;
+    height: 25vw;
+    margin-top: 10vw;
+}
+
+.left-overlay {
+  float: left;
+  width: 50vw;
+}
+
+.right-overlay {
+  float: left;
+  width: 30vw;
+  margin-left: 5vw;
+}
+
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.fa-times {
+  float: right;
+  margin: 2vw 2vw 0 0;
+  color: #003649;
+  font-size: 3vw;
+  cursor: pointer;
+}
+
+/*------------------------FOOTER------------------*/
+.name-footer {
+    grid-area: footer;
+    background-color: #001922;
+    height: 10vw;
+    color: white;
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 1.2vw;
+  }
+
+.footer_left{
+    float: left;
+    width: 33.33vw;
+   
+    margin-top: 2vw;
+}
+
+.footer_left p{
+    margin-left: 10vw;
+    line-height: 2vw;
+    font-size: 1.2vw;
+}
+
+.footer_mid{
+    float: left;
+    width: 33.33vw;
+    text-align: center;
+    margin-top: 4vw;
+    font-size: 2vw;
+}
+
+.footer_mid a {
+    color: white;
+}
+
+.footer_mid a:hover {
+    color: #003649;
+}
+
+.fa-linkedin-in {
+    margin: 0 3vw 0 3vw;
+}
+
+.footer_right{
+    float: left;
+    width: 33.33vw;
+    margin-top: 3vw;
+}
+
+.footer_right img {
+    width: 50%;
+    margin-left: 8vw;
+}
